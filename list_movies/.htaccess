@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteBase /list_movies/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) /list_movies/index.php?$1 [QSA,L]
+
+Options -Indexes
